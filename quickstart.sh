@@ -7,7 +7,7 @@ set -euo pipefail
 # Run from the web (interactive menu):
 #   curl -fsSL https://raw.githubusercontent.com/USER/REPO/main/quickstart.sh | bash
 #
-# Pick a game directly (number 1-7):
+# Pick a game directly (number 1-14):
 #   curl -fsSL .../quickstart.sh | bash -s -- 3
 #
 # Forward flags to the chosen installer (e.g. unattended mode):
@@ -27,6 +27,29 @@ GAME_NAMES=(
     "Quake (1996)"
     "The Elder Scrolls II: Daggerfall"
     "OpenRA (C&C, Red Alert, Dune 2000)"
+    "Quake II (1997)"
+    "Diablo (1996, shareware)"
+    "Marathon Trilogy"
+    "Wolfenstein: Enemy Territory"
+    "Duke Nukem 3D (1996, shareware)"
+    "Heroes of Might and Magic II (demo)"
+    "Heroes of Might and Magic III"
+)
+GAME_TAGS=(
+    "own copy required - installer fetches the data"
+    "own copy required - installer fetches the data"
+    "own copy required - installer fetches the data"
+    "own copy required - installer fetches the data"
+    "free demo - installer fetches full game if owned"
+    "free and complete"
+    "free and complete"
+    "free demo - installer fetches full game if owned"
+    "free demo - installer fetches full game if owned"
+    "free and complete"
+    "free and complete"
+    "free demo - full game comes from your own copy"
+    "free demo - full game comes from your own copy"
+    "free demo - full game comes from your own copy"
 )
 GAME_SCRIPTS=(
     "install-ut99.sh"
@@ -36,7 +59,16 @@ GAME_SCRIPTS=(
     "install-quake.sh"
     "install-daggerfall.sh"
     "install-openra.sh"
+    "install-quake2.sh"
+    "install-diablo.sh"
+    "install-marathon.sh"
+    "install-et.sh"
+    "install-duke3d.sh"
+    "install-homm2.sh"
+    "install-homm3.sh"
 )
+
+GAME_COUNT=${#GAME_NAMES[@]}
 
 TEMP_DIR=""
 
@@ -49,9 +81,17 @@ cleanup() {
 }
 trap cleanup EXIT
 
+is_valid_game_number() {
+    [[ "$1" =~ ^[0-9]+$ ]] && (( 1 <= $1 && $1 <= GAME_COUNT ))
+}
+
 preflight() {
     if [[ "$(uname)" != "Darwin" ]]; then
         echo "Error: These installers are for macOS only." >&2
+        exit 1
+    fi
+    if [[ ${#GAME_NAMES[@]} -ne ${#GAME_SCRIPTS[@]} ]] || [[ ${#GAME_NAMES[@]} -ne ${#GAME_TAGS[@]} ]]; then
+        echo "Error: GAME_NAMES, GAME_TAGS and GAME_SCRIPTS are out of sync." >&2
         exit 1
     fi
     for cmd in curl bash; do
@@ -69,7 +109,7 @@ Retro Game Quickstart — menu launcher for macOS (Apple Silicon & Intel)
 Run interactively and pick a game:
   curl -fsSL ${BASE_URL}/quickstart.sh | bash
 
-Pick a game directly (number 1-7):
+Pick a game directly (number 1-${GAME_COUNT}):
   curl -fsSL ${BASE_URL}/quickstart.sh | bash -s -- 3
 
 Forward flags to the chosen installer (e.g. unattended mode):
@@ -77,9 +117,9 @@ Forward flags to the chosen installer (e.g. unattended mode):
 
 Games:
 EOF
-    local i=1
-    for name in "${GAME_NAMES[@]}"; do
-        printf "  %d. %s\n" "$i" "$name"
+    local i=0
+    while [[ $i -lt ${#GAME_NAMES[@]} ]]; do
+        printf "  %d. %s  [%s]\n" $((i + 1)) "${GAME_NAMES[$i]}" "${GAME_TAGS[$i]}"
         i=$((i + 1))
     done
 }
@@ -87,8 +127,8 @@ EOF
 select_game() {
     local choice="${1:-}"
     if [[ -n "$choice" ]]; then
-        if [[ ! "$choice" =~ ^[1-7]$ ]]; then
-            echo "Error: invalid game number '$choice' (must be 1-7)." >&2
+        if ! is_valid_game_number "$choice"; then
+            echo "Error: invalid game number '$choice' (must be 1-${GAME_COUNT})." >&2
             exit 1
         fi
         SELECTED="$choice"
@@ -99,23 +139,23 @@ select_game() {
     echo ""
     echo "Choose a game to install:"
     echo ""
-    local i=1
-    for name in "${GAME_NAMES[@]}"; do
-        printf "  %d) %s\n" "$i" "$name"
+    local i=0
+    while [[ $i -lt ${#GAME_NAMES[@]} ]]; do
+        printf "  %d) %s  [%s]\n" $((i + 1)) "${GAME_NAMES[$i]}" "${GAME_TAGS[$i]}"
         i=$((i + 1))
     done
     echo ""
     while true; do
-        read -r -p "Enter number (1-7), or q to quit: " sel </dev/tty
+        read -r -p "Enter number (1-${GAME_COUNT}), or q to quit: " sel </dev/tty
         if [[ "${sel:-}" == "q" || "${sel:-}" == "Q" ]]; then
             echo "Cancelled."
             exit 0
         fi
-        if [[ "${sel:-}" =~ ^[1-7]$ ]]; then
+        if is_valid_game_number "${sel:-}"; then
             SELECTED="$sel"
             return
         fi
-        echo "  Invalid choice. Enter a number 1-7." >&2
+        echo "  Invalid choice. Enter a number 1-${GAME_COUNT}." >&2
     done
 }
 
@@ -131,8 +171,8 @@ main() {
 
     local SELECTED=""
     if [[ -n "$first_arg" && "$first_arg" =~ ^[0-9]+$ ]]; then
-        if [[ ! "$first_arg" =~ ^[1-7]$ ]]; then
-            echo "Error: invalid game number '$first_arg' (must be 1-7)." >&2
+        if ! is_valid_game_number "$first_arg"; then
+            echo "Error: invalid game number '$first_arg' (must be 1-${GAME_COUNT})." >&2
             exit 1
         fi
         select_game "$first_arg"
