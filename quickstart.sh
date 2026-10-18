@@ -7,7 +7,7 @@ set -euo pipefail
 # Run from the web (interactive menu):
 #   curl -fsSL https://raw.githubusercontent.com/USER/REPO/main/quickstart.sh | bash
 #
-# Pick a game directly (number 1-14):
+# Pick a game directly (number 1-17):
 #   curl -fsSL .../quickstart.sh | bash -s -- 3
 #
 # Forward flags to the chosen installer (e.g. unattended mode):
@@ -27,9 +27,12 @@ GAME_NAMES=(
     "Heroes of Might and Magic III (1999)"
     "Marathon Trilogy (1994-1996)"
     "OpenRA (C&C, Red Alert, Dune 2000)"
+    "OpenTTD (Transport Tycoon Deluxe)"
     "Quake (1996)"
     "Quake II (1997)"
     "Quake III Arena (1999)"
+    "ScummVM (Beneath a Steel Sky, FOTAQ, Lure)"
+    "Tyrian 2000 (1999)"
     "Unreal Gold (1998)"
     "Unreal Tournament (1999)"
     "Unreal Tournament 2004"
@@ -43,8 +46,11 @@ GAME_TAGS=(
     "free demo; full game needs your files"
     "free, full game"
     "free, full game"
+    "free, full game"
     "free demo; full game can also be downloaded"
     "free demo; full game can also be downloaded"
+    "free, full game"
+    "free, full game"
     "free, full game"
     "free, full game"
     "free, full game"
@@ -59,9 +65,12 @@ GAME_SCRIPTS=(
     "install-homm3.sh"
     "install-marathon.sh"
     "install-openra.sh"
+    "install-openttd.sh"
     "install-quake.sh"
     "install-quake2.sh"
     "install-quake3.sh"
+    "install-scummvm.sh"
+    "install-tyrian.sh"
     "install-unreal-gold.sh"
     "install-ut99.sh"
     "install-ut2004.sh"
