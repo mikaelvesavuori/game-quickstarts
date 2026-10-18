@@ -20,55 +20,63 @@ BRANCH="main"
 BASE_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}"
 
 GAME_NAMES=(
-    "Unreal Tournament (1999)"
-    "Unreal Gold (1998)"
-    "Unreal Tournament 2004"
-    "Quake III Arena"
-    "Quake (1996)"
-    "The Elder Scrolls II: Daggerfall"
+    "The Elder Scrolls II: Daggerfall (1996)"
+    "Diablo (1996)"
+    "Duke Nukem 3D (1996)"
+    "Heroes of Might and Magic II (1996)"
+    "Heroes of Might and Magic III (1999)"
+    "Marathon Trilogy (1994-1996)"
     "OpenRA (C&C, Red Alert, Dune 2000)"
+    "Quake (1996)"
     "Quake II (1997)"
-    "Diablo (1996, shareware)"
-    "Marathon Trilogy"
-    "Wolfenstein: Enemy Territory"
-    "Duke Nukem 3D (1996, shareware)"
-    "Heroes of Might and Magic II (demo)"
-    "Heroes of Might and Magic III"
+    "Quake III Arena (1999)"
+    "Unreal Gold (1998)"
+    "Unreal Tournament (1999)"
+    "Unreal Tournament 2004"
+    "Wolfenstein: Enemy Territory (2003)"
 )
 GAME_TAGS=(
-    "own copy required - installer fetches the data"
-    "own copy required - installer fetches the data"
-    "own copy required - installer fetches the data"
-    "own copy required - installer fetches the data"
-    "free demo - installer fetches full game if owned"
-    "free and complete"
-    "free and complete"
-    "free demo - installer fetches full game if owned"
-    "free demo - installer fetches full game if owned"
-    "free and complete"
-    "free and complete"
-    "free demo - full game comes from your own copy"
-    "free demo - full game comes from your own copy"
-    "free demo - full game comes from your own copy"
+    "free, full game"
+    "free demo; full game can also be downloaded"
+    "free demo; full game needs your files"
+    "free demo; full game needs your files"
+    "free demo; full game needs your files"
+    "free, full game"
+    "free, full game"
+    "free demo; full game can also be downloaded"
+    "free demo; full game can also be downloaded"
+    "free, full game"
+    "free, full game"
+    "free, full game"
+    "free, full game"
+    "free, full game"
 )
 GAME_SCRIPTS=(
-    "install-ut99.sh"
-    "install-unreal-gold.sh"
-    "install-ut2004.sh"
-    "install-quake3.sh"
-    "install-quake.sh"
     "install-daggerfall.sh"
-    "install-openra.sh"
-    "install-quake2.sh"
     "install-diablo.sh"
-    "install-marathon.sh"
-    "install-et.sh"
     "install-duke3d.sh"
     "install-homm2.sh"
     "install-homm3.sh"
+    "install-marathon.sh"
+    "install-openra.sh"
+    "install-quake.sh"
+    "install-quake2.sh"
+    "install-quake3.sh"
+    "install-unreal-gold.sh"
+    "install-ut99.sh"
+    "install-ut2004.sh"
+    "install-et.sh"
 )
 
 GAME_COUNT=${#GAME_NAMES[@]}
+
+# Longest title, so the [tag] column lines up no matter what the titles are
+NAME_COL_WIDTH=0
+for _name in "${GAME_NAMES[@]}"; do
+    if (( ${#_name} > NAME_COL_WIDTH )); then
+        NAME_COL_WIDTH=${#_name}
+    fi
+done
 
 TEMP_DIR=""
 
@@ -119,7 +127,7 @@ Games:
 EOF
     local i=0
     while [[ $i -lt ${#GAME_NAMES[@]} ]]; do
-        printf "  %d. %s  [%s]\n" $((i + 1)) "${GAME_NAMES[$i]}" "${GAME_TAGS[$i]}"
+        printf "  %2d. %-*s  [%s]\n" $((i + 1)) "$NAME_COL_WIDTH" "${GAME_NAMES[$i]}" "${GAME_TAGS[$i]}"
         i=$((i + 1))
     done
 }
@@ -141,7 +149,7 @@ select_game() {
     echo ""
     local i=0
     while [[ $i -lt ${#GAME_NAMES[@]} ]]; do
-        printf "  %d) %s  [%s]\n" $((i + 1)) "${GAME_NAMES[$i]}" "${GAME_TAGS[$i]}"
+        printf "  %2d) %-*s  [%s]\n" $((i + 1)) "$NAME_COL_WIDTH" "${GAME_NAMES[$i]}" "${GAME_TAGS[$i]}"
         i=$((i + 1))
     done
     echo ""

@@ -27,47 +27,47 @@ curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/ma
 ### Run a specific game directly
 
 ```bash
-# 1. Unreal Tournament (1999)
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-ut99.sh | bash
-
-# 2. Unreal Gold (1998)
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-unreal-gold.sh | bash
-
-# 3. Unreal Tournament 2004
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-ut2004.sh | bash
-
-# 4. Quake III Arena
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-quake3.sh | bash
-
-# 5. Quake (1996)
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-quake.sh | bash
-
-# 6. The Elder Scrolls II: Daggerfall
+#  1. The Elder Scrolls II: Daggerfall (1996)
 curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-daggerfall.sh | bash
 
-# 7. OpenRA (C&C, Red Alert, Dune 2000)
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-openra.sh | bash
-
-# 8. Quake II (1997)
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-quake2.sh | bash
-
-# 9. Diablo (1996)
+#  2. Diablo (1996)
 curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-diablo.sh | bash
 
-# 10. Marathon Trilogy
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-marathon.sh | bash
-
-# 11. Wolfenstein: Enemy Territory
-curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-et.sh | bash
-
-# 12. Duke Nukem 3D (1996)
+#  3. Duke Nukem 3D (1996)
 curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-duke3d.sh | bash
 
-# 13. Heroes of Might and Magic II (demo)
+#  4. Heroes of Might and Magic II (1996)
 curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-homm2.sh | bash
 
-# 14. Heroes of Might and Magic III
+#  5. Heroes of Might and Magic III (1999)
 curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-homm3.sh | bash
+
+#  6. Marathon Trilogy (1994-1996)
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-marathon.sh | bash
+
+#  7. OpenRA (C&C, Red Alert, Dune 2000)
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-openra.sh | bash
+
+#  8. Quake (1996)
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-quake.sh | bash
+
+#  9. Quake II (1997)
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-quake2.sh | bash
+
+# 10. Quake III Arena (1999)
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-quake3.sh | bash
+
+# 11. Unreal Gold (1998)
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-unreal-gold.sh | bash
+
+# 12. Unreal Tournament (1999)
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-ut99.sh | bash
+
+# 13. Unreal Tournament 2004
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-ut2004.sh | bash
+
+# 14. Wolfenstein: Enemy Territory (2003)
+curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-et.sh | bash
 ```
 
 Unattended (skip all confirmation prompts):
@@ -76,72 +76,71 @@ Unattended (skip all confirmation prompts):
 curl -fsSL https://raw.githubusercontent.com/mikaelvesavuori/game-quickstarts/main/install-ut99.sh | bash -s -- --yes
 ```
 
-| #  | Game                                | Data                                   | One-liner                                     |
-|----|-------------------------------------|----------------------------------------|-----------------------------------------------|
-| 1  | Unreal Tournament (1999)            | own copy · fetched for you             | `curl -fsSL …/install-ut99.sh \| bash`        |
-| 2  | Unreal Gold (1998)                  | own copy · fetched for you             | `curl -fsSL …/install-unreal-gold.sh \| bash` |
-| 3  | Unreal Tournament 2004              | own copy · fetched for you             | `curl -fsSL …/install-ut2004.sh \| bash`      |
-| 4  | Quake III Arena                     | own copy · fetched for you             | `curl -fsSL …/install-quake3.sh \| bash`      |
-| 5  | Quake (1996)                        | free demo · full game fetched if owned | `curl -fsSL …/install-quake.sh \| bash`       |
-| 6  | The Elder Scrolls II: Daggerfall    | free & complete                        | `curl -fsSL …/install-daggerfall.sh \| bash`  |
-| 7  | OpenRA (C&C, Red Alert, Dune 2000)  | free & complete                        | `curl -fsSL …/install-openra.sh \| bash`      |
-| 8  | Quake II (1997)                     | free demo · full game fetched if owned | `curl -fsSL …/install-quake2.sh \| bash`      |
-| 9  | Diablo (1996)                       | free demo · full game fetched if owned | `curl -fsSL …/install-diablo.sh \| bash`      |
-| 10 | Marathon Trilogy                    | free & complete                        | `curl -fsSL …/install-marathon.sh \| bash`    |
-| 11 | Wolfenstein: Enemy Territory        | free & complete                        | `curl -fsSL …/install-et.sh \| bash`          |
-| 12 | Duke Nukem 3D (1996)                | free demo · full game from your copy   | `curl -fsSL …/install-duke3d.sh \| bash`      |
-| 13 | Heroes of Might and Magic II (demo) | free demo · full game from your copy   | `curl -fsSL …/install-homm2.sh \| bash`       |
-| 14 | Heroes of Might and Magic III       | free demo · full game from your copy   | `curl -fsSL …/install-homm3.sh \| bash`       |
+| #  | Game                                | Data                                        | One-liner                                     |
+|----|-------------------------------------|---------------------------------------------|-----------------------------------------------|
+|  1 | The Elder Scrolls II: Daggerfall (1996)   | free, full game                             | `curl -fsSL …/install-daggerfall.sh  \| bash` |
+|  2 | Diablo (1996)                  | free demo; full game can also be downloaded | `curl -fsSL …/install-diablo.sh      \| bash` |
+|  3 | Duke Nukem 3D (1996)           | free demo; full game needs your files       | `curl -fsSL …/install-duke3d.sh      \| bash` |
+|  4 | Heroes of Might and Magic II (1996) | free demo; full game needs your files       | `curl -fsSL …/install-homm2.sh       \| bash` |
+|  5 | Heroes of Might and Magic III (1999)      | free demo; full game needs your files       | `curl -fsSL …/install-homm3.sh       \| bash` |
+|  6 | Marathon Trilogy (1994-1996)              | free, full game                             | `curl -fsSL …/install-marathon.sh    \| bash` |
+|  7 | OpenRA (C&C, Red Alert, Dune 2000)        | free, full game                             | `curl -fsSL …/install-openra.sh      \| bash` |
+|  8 | Quake (1996)                              | free demo; full game can also be downloaded | `curl -fsSL …/install-quake.sh       \| bash` |
+|  9 | Quake II (1997)                           | free demo; full game can also be downloaded | `curl -fsSL …/install-quake2.sh      \| bash` |
+| 10 | Quake III Arena (1999)                    | free, full game                             | `curl -fsSL …/install-quake3.sh      \| bash` |
+| 11 | Unreal Gold (1998)                        | free, full game                             | `curl -fsSL …/install-unreal-gold.sh \| bash` |
+| 12 | Unreal Tournament (1999)                  | free, full game                             | `curl -fsSL …/install-ut99.sh        \| bash` |
+| 13 | Unreal Tournament 2004                    | free, full game                             | `curl -fsSL …/install-ut2004.sh      \| bash` |
+| 14 | Wolfenstein: Enemy Territory (2003)       | free, full game                             | `curl -fsSL …/install-et.sh          \| bash` |
 
 > All game data is downloaded, checksum-verified, and cleaned up safely even on Ctrl+C. The menu launcher (`quickstart.sh`) just downloads the chosen installer to a temp dir and runs it, so it stays tiny and always serves the latest version from `main`.
 
 ## Installers
 
-| Script                   | Game                             | Genre    | Game data source                                                                                                               | One-click?                        |
-|--------------------------|----------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| `install-ut99.sh`        | Unreal Tournament (1999)         | FPS      | GOTY CD1 ISO (~620MB, OldUnreal)                                                                                               | Yes                               |
-| `install-unreal-gold.sh` | Unreal Gold (1998)               | FPS      | Unreal Gold CD ISO (~645MB, OldUnreal)                                                                                         | Yes                               |
-| `install-ut2004.sh`      | Unreal Tournament 2004           | FPS      | DVD ISO (~2.8GB, OldUnreal)                                                                                                    | Yes                               |
-| `install-quake3.sh`      | Quake III Arena                  | FPS      | CD ISO (~530MB, archive.org)                                                                                                   | Yes                               |
-| `install-quake.sh`       | Quake (1996)                     | FPS      | Full game (~597MB, archive.org) or Shareware (Episode 1, free)                                                                 | Yes — prompts for legitimate copy |
-| `install-daggerfall.sh`  | The Elder Scrolls II: Daggerfall | RPG      | Full game (~107MB, archive.org, free)                                                                                          | Yes                               |
-| `install-openra.sh`      | C&C, Red Alert, Dune 2000        | RTS      | Quick-install packages (~33MB, OpenRA mirrors)                                                                                 | Yes                               |
-| `install-quake2.sh`      | Quake II                         | FPS      | 3.14 demo (~36MB, Yamagi mirror, free) or full game (~897MB, archive.org)                                                      | Yes                               |
-| `install-diablo.sh`      | Diablo                           | ARPG     | Shareware data (~31MB, DevilutionX releases, free) or full game (~494MB, cdn.pvpgn.pro, for owners)                             | Yes                               |
-| `install-marathon.sh`    | Marathon 1–3                     | FPS      | Bundled with app (free, released by Bungie)                                                                                    | Yes                               |
-| `install-et.sh`          | Wolfenstein: Enemy Territory     | FPS (MP) | Fully free; original paks pre-installed (~229MB, ET: Legacy official mirror)                                                   | Yes                               |
-| `install-duke3d.sh`      | Duke Nukem 3D (shareware)        | FPS      | Shareware package (~6MB, archive.org, free)                                                                                    | Yes                               |
-| `install-homm2.sh`       | Heroes of Might and Magic II     | TBS      | Official demo (~40MB, archive.org, free)                                                                                       | Yes                               |
-| `install-homm3.sh`       | Heroes of Might and Magic III    | TBS      | Official Mac demo (~105MB, classicmacdemos.com, free) + demo-support mod; or own copy (GOG installer imported by the launcher) | Yes                               |
+| Script                   | Game                                      | Genre    | Game data source                                                                                                               | One-click?                        |
+|--------------------------|-------------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| `install-daggerfall.sh`  | The Elder Scrolls II: Daggerfall (1996)   | RPG      | Full game (~107MB, archive.org, free)                                                                                          | Yes                               |
+| `install-diablo.sh`      | Diablo (1996)                  | ARPG     | Shareware data (~31MB, DevilutionX releases, free) or full game (~494MB, cdn.pvpgn.pro, for owners)                            | Yes                               |
+| `install-duke3d.sh`      | Duke Nukem 3D (1996)           | FPS      | Shareware package (~6MB, archive.org, free)                                                                                    | Yes                               |
+| `install-homm2.sh`       | Heroes of Might and Magic II (1996) | TBS      | Official demo (~40MB, archive.org, free)                                                                                       | Yes                               |
+| `install-homm3.sh`       | Heroes of Might and Magic III (1999)      | TBS      | Official Mac demo (~105MB, classicmacdemos.com, free) + demo-support mod; or own copy (GOG installer imported by the launcher) | Yes                               |
+| `install-marathon.sh`    | Marathon Trilogy (1994-1996)              | FPS      | Bundled with app (free, released by Bungie)                                                                                    | Yes                               |
+| `install-openra.sh`      | OpenRA (C&C, Red Alert, Dune 2000)        | RTS      | Quick-install packages (~33MB, OpenRA mirrors)                                                                                 | Yes                               |
+| `install-quake.sh`       | Quake (1996)                              | FPS      | Full game (~597MB, archive.org) or Shareware (Episode 1, free)                                                                 | Yes — prompts for legitimate copy |
+| `install-quake2.sh`      | Quake II (1997)                           | FPS      | 3.14 demo (~36MB, Yamagi mirror, free) or full game (~897MB, archive.org)                                                      | Yes                               |
+| `install-quake3.sh`      | Quake III Arena (1999)                    | FPS      | CD ISO (~530MB, archive.org)                                                                                                   | Yes                               |
+| `install-unreal-gold.sh` | Unreal Gold (1998)                        | FPS      | Unreal Gold CD ISO (~645MB, OldUnreal)                                                                                         | Yes                               |
+| `install-ut99.sh`        | Unreal Tournament (1999)                  | FPS      | GOTY CD1 ISO (~620MB, OldUnreal)                                                                                               | Yes                               |
+| `install-ut2004.sh`      | Unreal Tournament 2004                    | FPS      | DVD ISO (~2.8GB, OldUnreal)                                                                                                    | Yes                               |
+| `install-et.sh`          | Wolfenstein: Enemy Territory (2003)       | FPS (MP) | Fully free; original paks pre-installed (~229MB, ET: Legacy official mirror)                                                   | Yes                               |
 
 ### Data tiers at a glance
 
-| Tier                                            | Meaning                                                                                                                     | Games                                                                |
-|-------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| **Free & complete**                             | The whole game is free — the installer downloads engine and all game data; no purchase ever needed                          | Marathon Trilogy, Wolfenstein: Enemy Territory, Daggerfall, OpenRA † |
-| **Free demo — installer fetches the full game** | Free shareware/demo installed now; if you own the full game, the installer can also download the full game data for you     | Quake (1996), Quake II, Diablo                                       |
-| **Free demo — you provide the full game files** | Free demo installed now; the full game is added by copying files from your own copy — each installer prints the exact steps | Duke Nukem 3D, HoMM2, HoMM3                                          |
-| **Own copy required — installer fetches**       | Paid games; once you confirm you own a copy, the installer downloads the disc data for you                                  | UT99, Unreal Gold, UT2004, Quake III Arena                           |
+| Tier                              | Meaning                                                                                               | Games                                                                                                            |
+|-----------------------------------|-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Fully free                        | Nothing to buy, nothing to copy — the script installs the complete game                               | Daggerfall, Marathon Trilogy, OpenRA, Quake III Arena, Unreal Gold, Unreal Tournament (1999), Unreal Tournament 2004, Wolfenstein: Enemy Territory † |
+| Free demo; download the full game | A demo or shareware is installed now; if you own the full game, the script downloads its data for you | Diablo, Quake (1996), Quake II                                                                                   |
+| Free demo; add your own files     | A demo is installed now; to upgrade, copy files from your own copy — the installer prints the steps   | Duke Nukem 3D, HoMM2, HoMM3                                                                                      |
 
 † OpenRA installs the core game files; FMV videos and CD soundtracks can still be added from the original CDs via the in-game "Manage Content" menu.
 
 ## Quick start (local clone)
 
 ```bash
-./install-ut99.sh          # Unreal Tournament 99
-./install-unreal-gold.sh   # Unreal Gold
-./install-ut2004.sh        # UT2004
-./install-quake3.sh        # Quake III Arena
-./install-quake.sh         # Quake (shareware)
-./install-daggerfall.sh    # The Elder Scrolls II: Daggerfall
-./install-openra.sh        # Command & Conquer, Red Alert, Dune 2000
-./install-quake2.sh        # Quake II (demo)
-./install-diablo.sh        # Diablo (shareware)
-./install-marathon.sh      # Marathon 1, 2, Infinity
-./install-et.sh            # Wolfenstein: Enemy Territory
-./install-duke3d.sh       # Duke Nukem 3D (shareware)
-./install-homm2.sh         # Heroes of Might and Magic II (demo)
-./install-homm3.sh         # Heroes of Might and Magic III
+./install-daggerfall.sh    # The Elder Scrolls II: Daggerfall (1996)
+./install-diablo.sh        # Diablo (1996)
+./install-duke3d.sh        # Duke Nukem 3D (1996)
+./install-homm2.sh         # Heroes of Might and Magic II (1996)
+./install-homm3.sh         # Heroes of Might and Magic III (1999)
+./install-marathon.sh      # Marathon Trilogy (1994-1996)
+./install-openra.sh        # OpenRA (C&C, Red Alert, Dune 2000)
+./install-quake.sh         # Quake (1996)
+./install-quake2.sh        # Quake II (1997)
+./install-quake3.sh        # Quake III Arena (1999)
+./install-unreal-gold.sh   # Unreal Gold (1998)
+./install-ut99.sh          # Unreal Tournament (1999)
+./install-ut2004.sh        # Unreal Tournament 2004
+./install-et.sh            # Wolfenstein: Enemy Territory (2003)
 ```
 
 Or fully unattended (skip confirmation prompt):
@@ -162,79 +161,7 @@ All engines are native on both Apple Silicon and Intel - universal binaries ever
 
 ---
 
-## Unreal Tournament (1999)
-
-```bash
-./install-ut99.sh
-```
-
-- **Engine**: OldUnreal v469e patch (universal binary)
-- **Game data**: GOTY CD1 ISO from `files.oldunreal.net` (SHA256-verified, 4 mirrors)
-- **Steps**: Install patch → Download ISO → Copy Maps/Textures/Sounds/Music → Decompress `.uz` maps → Install Bonus Pack 4
-- **Disk space**: ~1.3GB
-- **Launch**: `open /Applications/UnrealTournament.app`
-- **Game data location**: `~/Library/Application Support/Unreal Tournament`
-- **Requires**: `7zip` for Bonus Pack 4 (script prompts to `brew install` if missing)
-
-## Unreal Gold (1998)
-
-```bash
-./install-unreal-gold.sh
-```
-
-- **Engine**: OldUnreal v227k patch (universal binary)
-- **Game data**: Unreal Gold CD ISO from `files.oldunreal.net` (SHA256-verified, 4 mirrors)
-- **Steps**: Install patch → Download ISO → Copy Maps/Sounds/Textures/Music → Delete obsolete font texture
-- **Disk space**: ~800MB
-- **Launch**: `open /Applications/Unreal.app`
-- **Game data location**: `~/Library/Application Support/Unreal`
-- **Note**: No map decompression needed (Unreal Gold maps are uncompressed on the CD)
-
-## Unreal Tournament 2004
-
-```bash
-./install-ut2004.sh
-```
-
-- **Engine**: OldUnreal v3374 patch (universal binary, preview release)
-- **Game data**: DVD ISO from `files.oldunreal.net` (SHA256-verified, 3 mirrors)
-- **Steps**: Install patch → Download unshield tool → Download ISO → Copy CAB files → Extract with unshield → Install game data
-- **Disk space**: ~6GB
-- **Launch**: `open /Applications/UT2004.app`
-- **Game data location**: `~/Library/Application Support/UT2004`
-- **Note**: Bonus packs (CBP1, CBP2, ECE) are included in the DVD ISO
-- **Warning**: The patch is currently a preview release (not yet marked stable)
-
-## Quake III Arena
-
-```bash
-./install-quake3.sh
-```
-
-- **Engine**: ioquake3 notarized Universal 2 build (signed, Apple Silicon + Intel)
-- **Game data**: CD ISO from archive.org (~530MB) + patch data from ioquake3.org (pak1-8)
-- **Steps**: Install engine → Download patch data → Download CD ISO → Copy pak0.pk3 → Install patch pk3s
-- **Disk space**: ~600MB
-- **Launch**: `open /Applications/ioquake3/ioquake3.app`
-- **Install location**: `/Applications/ioquake3/` (app + `baseq3/` + `missionpack/`)
-- **Note**: The original 1999 CD does not include Team Arena. For Team Arena, purchase from GOG ($6) or Steam ($15), then copy `missionpack/pak0.pk3`
-
-## Quake (1996)
-
-```bash
-./install-quake.sh
-```
-
-- **Engine**: vkQuake from Mac Source Ports (Universal 2, signed, Vulkan via MoltenVK)
-- **Game data**: Full game from archive.org (~597MB, if user owns a legitimate copy) or Shareware (Episode 1, free)
-- **Steps**: Install engine → Ask if user owns a legitimate copy → Download full game (all episodes + mission packs + soundtrack) or shareware → Set up game data
-- **Disk space**: ~50MB (shareware) or ~700MB (full game)
-- **Launch**: `open /Applications/Quake/vkQuake.app`
-- **Install location**: `/Applications/Quake/` (app + `id1/` + optional `hipnotic/` + `rogue/`)
-- **Requires**: `7zip` (script prompts to `brew install` if missing)
-- **Full game includes**: All 4 episodes, Mission Pack 1 (Scourge of Armagon), Mission Pack 2 (Dissolution of Eternity), and CD soundtrack as OGG files
-
-## The Elder Scrolls II: Daggerfall
+## The Elder Scrolls II: Daggerfall (1996)
 
 ```bash
 ./install-daggerfall.sh
@@ -248,38 +175,6 @@ All engines are native on both Apple Silicon and Intel - universal binaries ever
 - **Requires**: `7zip` (script prompts to `brew install` if missing)
 - **Note**: Game data is bundled inside the .app (portable mode) — no first-run directory selection needed
 - **Daggerfall Unity improvements**: Modern resolution and controls, bug fixes, mod support
-
-## OpenRA — Command & Conquer, Red Alert, Dune 2000
-
-```bash
-./install-openra.sh
-```
-
-- **Engine**: OpenRA release-20250330 (Universal 2, Apple Silicon + Intel)
-- **Game data**: Quick-install packages from OpenRA mirrors (~33MB total for all 3 games)
-- **Steps**: Install 3 apps → Download game data for C&C, Red Alert, and Dune 2000 → Pre-install to skip first-launch download
-- **Disk space**: ~350MB
-- **Three apps installed**:
-  - `OpenRA - Tiberian Dawn.app` (Command & Conquer)
-  - `OpenRA - Red Alert.app`
-  - `OpenRA - Dune 2000.app`
-- **Launch**: `open '/Applications/OpenRA - Tiberian Dawn.app'` (or Red Alert / Dune 2000)
-- **Game data location**: `~/Library/Application Support/OpenRA/Content/`
-- **Note**: Core game data only (no FMV videos or music soundtrack). For full content, use "Manage Content" > "Detect Disc or Installation" in-game with original CDs. C&C and Red Alert were released as freeware by EA.
-
-## Quake II (1997)
-
-```bash
-./install-quake2.sh
-```
-
-- **Engine**: Yamagi Quake II 8.70 (Mac Source Ports build, universal 2, signed/notarized)
-- **Game data**: official 3.14 demo (~36MB, Yamagi's own mirror, SHA/MD5-verified) — 3 single-player levels + deathmatch maps; or full game (~897MB, archive.org) if you own a copy
-- **Steps**: Install engine → Download demo/full game → Extract → Install to `~/.local/share/YamagiQ2`
-- **Disk space**: ~150MB (demo) or ~2GB (full)
-- **Launch**: `open /Applications/Quake2/yquake2.app`
-- **Game data location**: `~/.local/share/YamagiQ2`
-- **Note**: Saving is disabled in the demo version; multiplayer works on the demo's included deathmatch maps
 
 ## Diablo (1996)
 
@@ -296,36 +191,6 @@ All engines are native on both Apple Silicon and Intel - universal binaries ever
 - **Game data location**: `~/Library/Application Support/diasurgical/devilution`
 - **Note**: Shareware includes the Cathedral levels; TCP/IP multiplayer works between shareware players out of the box. Upgrade any time by re-running the installer and answering 'y' to the ownership question. Hellfire expansion: copy `HELLFIRE.MPQ` (+ `HFMUSIC.MPQ`, `HFVOICE.MPQ`) from your copy into the data folder.
 
-## Marathon Trilogy (1994–1996)
-
-```bash
-./install-marathon.sh
-```
-
-- **Engine + data**: the three official Aleph One 1.11.1 macOS releases — each a ready-to-run app with the game data bundled inside (SHA256-verified, ~128MB total)
-- **Data legitimacy**: all three games were released as freely redistributable data by Bungie
-- **Steps**: Download + verify each DMG → copy three apps to `/Applications`
-- **Disk space**: ~260MB
-- **Three apps installed**:
-  - `Classic Marathon.app`
-  - `Classic Marathon 2.app`
-  - `Classic Marathon Infinity.app`
-- **Launch**: `open '/Applications/Classic Marathon.app'` (etc.)
-- **Playing with friends**: built-in metaserver (server browser) and full campaign co-op — join games straight from the in-game menu, no setup needed
-
-## Wolfenstein: Enemy Territory
-
-```bash
-./install-et.sh
-```
-
-- **Engine**: ET: Legacy 2.86.2 (official macOS release, universal 2)
-- **Game data**: the entire game is free (engine + data, released as freeware by id Software/Splash Damage); the original 2003 paks (~229MB) are pre-installed from ET: Legacy's official mirror
-- **Steps**: Download official DMG (MD5-verified) → install the `ETLegacy` folder to `/Applications` → download pak0-2 (SHA256-verified) into `etmain`
-- **Disk space**: ~280MB download, ~520MB installed
-- **Launch**: `open '/Applications/ETLegacy/ET Legacy.app'`
-- **Playing with friends**: multiplayer-only game with active public servers — connects to the live master server out of the box; host your own dedicated server with the bundled `etlded`
-
 ## Duke Nukem 3D (1996)
 
 ```bash
@@ -341,7 +206,7 @@ All engines are native on both Apple Silicon and Intel - universal binaries ever
 - **Requires**: `7zip` (script prompts to `brew install` if missing)
 - **Note**: The created launcher app starts Raze from the data folder, since Raze finds game data in its working directory. Multiplayer is available (basic P2P netcode; direct host/join from the in-game menu). Upgrade to the full game by replacing `DUKE3D.GRP` with one from an owned Atomic Edition copy.
 
-## Heroes of Might and Magic II (1996, demo)
+## Heroes of Might and Magic II (1996)
 
 ```bash
 ./install-homm2.sh
@@ -374,6 +239,140 @@ All engines are native on both Apple Silicon and Intel - universal binaries ever
 - **Note**: demo data requires VCMI 1.8.0 — the latest stable 1.7.5 crashes on a partially-included creature animation that 1.8.0 handles. The installer pins a known-good 1.8.0 development build; this pin should be replaced with the 1.8.0 stable release when it ships. When upgrading from demo to full game, disable the "Heroes III Demo" mod in the launcher first.
 - **Playing with friends**: VCMI has built-in network multiplayer plus hot-seat — host or join from the in-game multiplayer menu
 
+## Marathon Trilogy (1994-1996)
+
+```bash
+./install-marathon.sh
+```
+
+- **Engine + data**: the three official Aleph One 1.11.1 macOS releases — each a ready-to-run app with the game data bundled inside (SHA256-verified, ~128MB total)
+- **Data legitimacy**: all three games were released as freely redistributable data by Bungie
+- **Steps**: Download + verify each DMG → copy three apps to `/Applications`
+- **Disk space**: ~260MB
+- **Three apps installed**:
+  - `Classic Marathon.app`
+  - `Classic Marathon 2.app`
+  - `Classic Marathon Infinity.app`
+- **Launch**: `open '/Applications/Classic Marathon.app'` (etc.)
+- **Playing with friends**: built-in metaserver (server browser) and full campaign co-op — join games straight from the in-game menu, no setup needed
+
+## OpenRA — Command & Conquer, Red Alert, Dune 2000
+
+```bash
+./install-openra.sh
+```
+
+- **Engine**: OpenRA release-20250330 (Universal 2, Apple Silicon + Intel)
+- **Game data**: Quick-install packages from OpenRA mirrors (~33MB total for all 3 games)
+- **Steps**: Install 3 apps → Download game data for C&C, Red Alert, and Dune 2000 → Pre-install to skip first-launch download
+- **Disk space**: ~350MB
+- **Three apps installed**:
+  - `OpenRA - Tiberian Dawn.app` (Command & Conquer)
+  - `OpenRA - Red Alert.app`
+  - `OpenRA - Dune 2000.app`
+- **Launch**: `open '/Applications/OpenRA - Tiberian Dawn.app'` (or Red Alert / Dune 2000)
+- **Game data location**: `~/Library/Application Support/OpenRA/Content/`
+- **Note**: Core game data only (no FMV videos or music soundtrack). For full content, use "Manage Content" > "Detect Disc or Installation" in-game with original CDs. C&C and Red Alert were released as freeware by EA.
+
+## Quake (1996)
+
+```bash
+./install-quake.sh
+```
+
+- **Engine**: vkQuake from Mac Source Ports (Universal 2, signed, Vulkan via MoltenVK)
+- **Game data**: Full game from archive.org (~597MB, if user owns a legitimate copy) or Shareware (Episode 1, free)
+- **Steps**: Install engine → Ask if user owns a legitimate copy → Download full game (all episodes + mission packs + soundtrack) or shareware → Set up game data
+- **Disk space**: ~50MB (shareware) or ~700MB (full game)
+- **Launch**: `open /Applications/Quake/vkQuake.app`
+- **Install location**: `/Applications/Quake/` (app + `id1/` + optional `hipnotic/` + `rogue/`)
+- **Requires**: `7zip` (script prompts to `brew install` if missing)
+- **Full game includes**: All 4 episodes, Mission Pack 1 (Scourge of Armagon), Mission Pack 2 (Dissolution of Eternity), and CD soundtrack as OGG files
+
+## Quake II (1997)
+
+```bash
+./install-quake2.sh
+```
+
+- **Engine**: Yamagi Quake II 8.70 (Mac Source Ports build, universal 2, signed/notarized)
+- **Game data**: official 3.14 demo (~36MB, Yamagi's own mirror, SHA/MD5-verified) — 3 single-player levels + deathmatch maps; or full game (~897MB, archive.org) if you own a copy
+- **Steps**: Install engine → Download demo/full game → Extract → Install to `~/.local/share/YamagiQ2`
+- **Disk space**: ~150MB (demo) or ~2GB (full)
+- **Launch**: `open /Applications/Quake2/yquake2.app`
+- **Game data location**: `~/.local/share/YamagiQ2`
+- **Note**: Saving is disabled in the demo version; multiplayer works on the demo's included deathmatch maps
+
+## Quake III Arena (1999)
+
+```bash
+./install-quake3.sh
+```
+
+- **Engine**: ioquake3 notarized Universal 2 build (signed, Apple Silicon + Intel)
+- **Game data**: CD ISO from archive.org (~530MB) + patch data from ioquake3.org (pak1-8)
+- **Steps**: Install engine → Download patch data → Download CD ISO → Copy pak0.pk3 → Install patch pk3s
+- **Disk space**: ~600MB
+- **Launch**: `open /Applications/ioquake3/ioquake3.app`
+- **Install location**: `/Applications/ioquake3/` (app + `baseq3/` + `missionpack/`)
+- **Note**: The original 1999 CD does not include Team Arena. For Team Arena, purchase from GOG ($6) or Steam ($15), then copy `missionpack/pak0.pk3`
+
+## Unreal Gold (1998)
+
+```bash
+./install-unreal-gold.sh
+```
+
+- **Engine**: OldUnreal v227k patch (universal binary)
+- **Game data**: Unreal Gold CD ISO from `files.oldunreal.net` (SHA256-verified, 4 mirrors)
+- **Steps**: Install patch → Download ISO → Copy Maps/Sounds/Textures/Music → Delete obsolete font texture
+- **Disk space**: ~800MB
+- **Launch**: `open /Applications/Unreal.app`
+- **Game data location**: `~/Library/Application Support/Unreal`
+- **Note**: No map decompression needed (Unreal Gold maps are uncompressed on the CD)
+
+## Unreal Tournament (1999)
+
+```bash
+./install-ut99.sh
+```
+
+- **Engine**: OldUnreal v469e patch (universal binary)
+- **Game data**: GOTY CD1 ISO from `files.oldunreal.net` (SHA256-verified, 4 mirrors)
+- **Steps**: Install patch → Download ISO → Copy Maps/Textures/Sounds/Music → Decompress `.uz` maps → Install Bonus Pack 4
+- **Disk space**: ~1.3GB
+- **Launch**: `open /Applications/UnrealTournament.app`
+- **Game data location**: `~/Library/Application Support/Unreal Tournament`
+- **Requires**: `7zip` for Bonus Pack 4 (script prompts to `brew install` if missing)
+
+## Unreal Tournament 2004
+
+```bash
+./install-ut2004.sh
+```
+
+- **Engine**: OldUnreal v3374 patch (universal binary, preview release)
+- **Game data**: DVD ISO from `files.oldunreal.net` (SHA256-verified, 3 mirrors)
+- **Steps**: Install patch → Download unshield tool → Download ISO → Copy CAB files → Extract with unshield → Install game data
+- **Disk space**: ~6GB
+- **Launch**: `open /Applications/UT2004.app`
+- **Game data location**: `~/Library/Application Support/UT2004`
+- **Note**: Bonus packs (CBP1, CBP2, ECE) are included in the DVD ISO
+- **Warning**: The patch is currently a preview release (not yet marked stable)
+
+## Wolfenstein: Enemy Territory (2003)
+
+```bash
+./install-et.sh
+```
+
+- **Engine**: ET: Legacy 2.86.2 (official macOS release, universal 2)
+- **Game data**: the entire game is free (engine + data, released as freeware by id Software/Splash Damage); the original 2003 paks (~229MB) are pre-installed from ET: Legacy's official mirror
+- **Steps**: Download official DMG (MD5-verified) → install the `ETLegacy` folder to `/Applications` → download pak0-2 (SHA256-verified) into `etmain`
+- **Disk space**: ~280MB download, ~520MB installed
+- **Launch**: `open '/Applications/ETLegacy/ET Legacy.app'`
+- **Playing with friends**: multiplayer-only game with active public servers — connects to the live master server out of the box; host your own dedicated server with the bundled `etlded`
+
 ---
 
 ## Common features
@@ -394,20 +393,20 @@ Variables at the top of each script can be tweaked (patch versions, install path
 ## Files
 
 - `quickstart.sh` — menu launcher (run from the web; picks and runs any installer)
-- `install-ut99.sh` — Unreal Tournament (1999) installer
-- `install-unreal-gold.sh` — Unreal Gold (1998) installer
-- `install-ut2004.sh` — Unreal Tournament 2004 installer
-- `install-quake3.sh` — Quake III Arena installer
-- `install-quake.sh` — Quake (1996) installer
-- `install-daggerfall.sh` — The Elder Scrolls II: Daggerfall installer
+- `install-daggerfall.sh` — The Elder Scrolls II: Daggerfall (1996) installer
+- `install-diablo.sh` — Diablo (1996) installer
+- `install-duke3d.sh` — Duke Nukem 3D (1996) installer
+- `install-homm2.sh` — Heroes of Might and Magic II (1996) installer
+- `install-homm3.sh` — Heroes of Might and Magic III (1999) installer
+- `install-marathon.sh` — Marathon Trilogy (1994-1996) installer
 - `install-openra.sh` — OpenRA (C&C, Red Alert, Dune 2000) installer
+- `install-quake.sh` — Quake (1996) installer
 - `install-quake2.sh` — Quake II (1997) installer
-- `install-diablo.sh` — Diablo (1996, shareware) installer
-- `install-marathon.sh` — Marathon Trilogy installer
-- `install-et.sh` — Wolfenstein: Enemy Territory installer
-- `install-duke3d.sh` — Duke Nukem 3D (1996, shareware) installer
-- `install-homm2.sh` — Heroes of Might and Magic II (demo) installer
-- `install-homm3.sh` — Heroes of Might and Magic III installer
+- `install-quake3.sh` — Quake III Arena (1999) installer
+- `install-unreal-gold.sh` — Unreal Gold (1998) installer
+- `install-ut99.sh` — Unreal Tournament (1999) installer
+- `install-ut2004.sh` — Unreal Tournament 2004 installer
+- `install-et.sh` — Wolfenstein: Enemy Territory (2003) installer
 - `original.sh` — original untested UT99 script (kept for reference)
 
 ## Playing with friends
