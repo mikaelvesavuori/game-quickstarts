@@ -7,7 +7,7 @@ set -euo pipefail
 # Run from the web (interactive menu):
 #   curl -fsSL https://raw.githubusercontent.com/USER/REPO/main/quickstart.sh | bash
 #
-# Pick a game directly (number 1-17):
+# Pick a game directly (number 1-24):
 #   curl -fsSL .../quickstart.sh | bash -s -- 3
 #
 # Forward flags to the chosen installer (e.g. unattended mode):
@@ -22,6 +22,7 @@ BASE_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}
 GAME_NAMES=(
     "The Elder Scrolls II: Daggerfall (1996)"
     "Diablo (1996)"
+    "Doom via Freedoom (1993)"
     "Duke Nukem 3D (1996)"
     "Heroes of Might and Magic II (1996)"
     "Heroes of Might and Magic III (1999)"
@@ -31,18 +32,23 @@ GAME_NAMES=(
     "Quake (1996)"
     "Quake II (1997)"
     "Quake III Arena (1999)"
+    "Shadow Warrior (1997)"
     "ScummVM (Beneath a Steel Sky, FOTAQ, Lure)"
     "SimCity 2000 (1993)"
     "SimTower: The Vertical Empire (1994)"
+    "Theme Hospital (1997)"
     "Tyrian 2000 (1999)"
     "Unreal Gold (1998)"
     "Unreal Tournament (1999)"
     "Unreal Tournament 2004"
+    "Warzone 2100 (1999)"
+    "Wolfenstein 3D (1992)"
     "Wolfenstein: Enemy Territory (2003)"
 )
 GAME_TAGS=(
     "free, full game"
     "free demo; full game can also be downloaded"
+    "free, full game"
     "free demo; full game needs your files"
     "free demo; full game needs your files"
     "free demo; full game needs your files"
@@ -51,19 +57,24 @@ GAME_TAGS=(
     "free, full game"
     "free demo; full game can also be downloaded"
     "free demo; full game can also be downloaded"
+    "free, full game"
     "free, full game"
     "free, full game"
     "free demo; full game needs your files"
     "abandonware, full game - unofficial download"
+    "free demo; full game needs your files"
     "free, full game"
     "free, full game"
     "free, full game"
     "free, full game"
+    "free, full game"
+    "free demo; full game needs your files"
     "free, full game"
 )
 GAME_SCRIPTS=(
     "install-daggerfall.sh"
     "install-diablo.sh"
+    "install-doom.sh"
     "install-duke3d.sh"
     "install-homm2.sh"
     "install-homm3.sh"
@@ -74,12 +85,16 @@ GAME_SCRIPTS=(
     "install-quake2.sh"
     "install-quake3.sh"
     "install-scummvm.sh"
+    "install-shadowwarrior.sh"
     "install-simcity2000.sh"
     "install-simtower.sh"
+    "install-themehospital.sh"
     "install-tyrian.sh"
     "install-unreal-gold.sh"
     "install-ut99.sh"
     "install-ut2004.sh"
+    "install-warzone2100.sh"
+    "install-wolf3d.sh"
     "install-et.sh"
 )
 
