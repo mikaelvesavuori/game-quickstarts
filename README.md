@@ -6,6 +6,8 @@ One-script installers for classic games on macOS — Apple Silicon and Intel. Ea
 
 No clone needed — run any installer with a single command (macOS, Apple Silicon or Intel). The scripts are self-contained and read prompts from your terminal (`/dev/tty`), so piping over `curl | bash` works exactly like running a local clone.
 
+**Anxious about piping `curl` into `bash`?** Good instinct. Read [`quickstart.sh`](https://github.com/mikaelvesavuori/game-quickstarts/blob/main/quickstart.sh) first, or browse [all the installers](https://github.com/mikaelvesavuori/game-quickstarts) — everything is plain, readable shell, no minified blobs, nothing hidden. The interactive menu points here for the same reason.
+
 ### Interactive menu
 
 ```bash

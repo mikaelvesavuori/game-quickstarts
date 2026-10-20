@@ -18,6 +18,19 @@ REPO_OWNER="mikaelvesavuori"
 REPO_NAME="game-quickstarts"
 BRANCH="main"
 BASE_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}"
+REPO_URL="https://github.com/${REPO_OWNER}/${REPO_NAME}"
+
+# ANSI colors for the banner (empty when stdout isn't a terminal,
+# so piped/redirected output stays plain)
+if [[ -t 1 ]]; then
+    CLR_CYAN=$'\033[36m'
+    CLR_MAGENTA=$'\033[35m'
+    CLR_RESET=$'\033[0m'
+else
+    CLR_CYAN=""
+    CLR_MAGENTA=""
+    CLR_RESET=""
+fi
 
 GAME_NAMES=(
     "The Elder Scrolls II: Daggerfall (1996)"
@@ -140,7 +153,45 @@ preflight() {
     done
 }
 
+print_banner() {
+    local release_date short_url
+    release_date=$(date +%Y-%m)
+    short_url="github.com/${REPO_OWNER}/${REPO_NAME}"
+
+    printf '\n'
+
+    # Warez-style RETRO QUICKSTART lockup (ANSI Shadow block letters, 79 columns)
+    printf '%s' "$CLR_CYAN"
+    cat <<'EOF'
+                  ██████╗ ███████╗████████╗██████╗  ██████╗ 
+                  ██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗
+                  ██████╔╝█████╗     ██║   ██████╔╝██║   ██║
+                  ██╔══██╗██╔══╝     ██║   ██╔══██╗██║   ██║
+                  ██║  ██║███████╗   ██║   ██║  ██║╚██████╔╝
+                  ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ 
+ ██████╗ ██╗   ██╗██╗ ██████╗██╗  ██╗███████╗████████╗ █████╗ ██████╗ ████████╗
+██╔═══██╗██║   ██║██║██╔════╝██║ ██╔╝██╔════╝╚══██╔══╝██╔══██╗██╔══██╗╚══██╔══╝
+██║   ██║██║   ██║██║██║     █████╔╝ ██████╗    ██║   ███████║██████╔╝   ██║   
+██║▄▄ ██║██║   ██║██║██║     ██╔═██╗ ╚════██║   ██║   ██╔══██║██╔══██║   ██║   
+╚██████╔╝╚██████╔╝██║╚██████╗██║  ██╗██████╔╝   ██║   ██║  ██║██║  ██║   ██║   
+ ╚══▀▀═╝  ╚═════╝ ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+EOF
+    printf '%s\n\n' "$CLR_RESET"
+
+    # Release NFO box (80 columns)
+    printf '%s' "$CLR_MAGENTA"
+    printf '%s\n' '╔═══[ RELEASE NFO ]════════════════════════════════════════════════════════════╗'
+    printf '║ %-38s%-38s ║\n' "RELEASE : ${release_date}" "PLATFORM : macOS (AS & Intel)"
+    printf '║ %-38s%-38s ║\n' "COUNT   : ${GAME_COUNT} classic games" "SUPPLIER : ${REPO_OWNER}"
+    printf '║ %-76s ║\n' "SOURCE  : ${short_url}"
+    printf '%s\n\n' '╚══════════════════════════════════════════════════════════════════════════════╝'
+    printf '%s' "$CLR_RESET"
+
+    printf '  %s%s%s\n\n' "$CLR_CYAN" "$REPO_URL" "$CLR_RESET"
+}
+
 usage() {
+    print_banner
     cat <<EOF
 Retro Game Quickstart — menu launcher for macOS (Apple Silicon & Intel)
 
@@ -173,8 +224,7 @@ select_game() {
         return
     fi
 
-    echo "=== Retro Game Quickstart ==="
-    echo ""
+    print_banner
     echo "Choose a game to install:"
     echo ""
     local i=0
